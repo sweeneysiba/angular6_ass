@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-1"></div>
+  <div class="col-sm-10" >
+
+      <div class="col-sm-5 squareInput block addCursor" *ngFor="let list of inputTags" >
+          <div *ngIf="!list.editFlag" id='exit' class="crossClose" (click)='deleteTags(list.index)'> <span style="font-size: 20px;text-align:center">x</span></div>
+          <div class="content">
+            <label *ngIf="!list.editFlag">{{list.name}}</label>
+            <br>
+            <button *ngIf="!list.editFlag" class="btn btnedit" (click)="renameTags(list.index)" style="border-radius:5px; width:100px;">Edit</button>
+            <br>
+            <div class="cross" *ngIf="list.editFlag">
+
+            </div>
+            <br>
+            <br>
+            <input  autofocus   placeholder="Enter Tag . . . " *ngIf="list.editFlag" [disabled]="isedit" (keydown.enter)="addInputTags(list.index)" type="text"  id="tagName" [(ngModel)]="list.name" style="display:block; padding-left:5px;color:black; border-radius: 20px; margin-top: 10px; animation: blinker 1s linear infinite;">
+          </div>
+          </div>
+      <div (click)="openInputBox()" class="col-sm-5 squareInput1 addCursor">
+          <span class="insideblock big"><i class="fa fa-plus" aria-hidden="true" ></i>
+          </span>
+          <br/>
+      </div>
+
+  </div>
+  <div class="col-sm-1"></div>
+</div>

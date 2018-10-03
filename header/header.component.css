@@ -1,0 +1,12 @@
+.center {
+    padding:10px 0px;
+    background-color:#39cdf3;
+    color:white;
+    font-size: 25px;
+    padding-left:20px;
+}
+.container-fluid {
+    padding-right: 0px; 
+     padding-left: 0px;
+     overflow:hidden;
+}
